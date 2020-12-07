@@ -1730,7 +1730,7 @@ html body .contact .formAndSvgs {
 
 html body .contact .formAndSvgs .contactForm {
   width: 50%;
-  background-image: url("../images/contactFormCover.svg");
+  //background-image: url("../images/contactFormCover.svg");
   padding: 1.5%;
   background-attachment: fixed;
   background-repeat: no-repeat;
