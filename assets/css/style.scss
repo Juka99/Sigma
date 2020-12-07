@@ -1,0 +1,3414 @@
+*{
+
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Mukta', sans-serif;
+
+}
+
+
+// Rezolucije za responsive
+
+$d0: 3840px;
+$d1 : 3440px;
+$d2: 2560px;
+$d3: 2048px;
+$d4: 1920px;
+$d5: 1680px;
+$d6: 1600px;
+$d7: 1536px;
+$d8: 1440px;
+$d10: 1360px;
+$d11: 1280px;
+$d12: 1024px;
+$d13: 992px;
+$d14: 768px;
+$d15: 576px;
+$d16: 480px;
+$d17: 380px;
+
+
+// Mixini za resposnive
+
+@mixin d0 {
+    @media (max-width: #{$d0}){
+        @content;
+    }
+}
+
+@mixin d1 {
+    @media (max-width: #{$d1}){
+        @content;
+    }
+}
+
+@mixin d1 {
+    @media (max-width: #{$d1}){
+        @content;
+    }
+}
+
+
+@mixin d2 {
+    @media (max-width: #{$d2}){
+        @content;
+    }
+}
+
+@mixin d3 {
+    @media (max-width: #{$d3}){
+        @content;
+    }
+}
+
+@mixin d4 {
+    @media (max-width: #{$d4}){
+        @content;
+    }
+}
+
+@mixin d5 {
+    @media (max-width: #{$d5}){
+        @content;
+    }
+}
+
+@mixin d6 {
+    @media (max-width: #{$d6}){
+        @content;
+    }
+}
+
+@mixin d7 {
+    @media (max-width: #{$d7}){
+        @content;
+    }
+}
+
+@mixin d8 {
+    @media (max-width: #{$d8}){
+        @content;
+    }
+}
+
+
+@mixin d10 {
+    @media (max-width: #{$d10}){
+        @content;
+    }
+}
+
+@mixin d11 {
+    @media (max-width: #{$d11}){
+        @content;
+    }
+}
+
+@mixin d12 {
+    @media (max-width: #{$d12}){
+        @content;
+    }
+}
+
+@mixin d13 {
+    @media (max-width: #{$d13}){
+        @content;
+    }
+}
+
+@mixin d14 {
+    @media (max-width: #{$d14}){
+        @content;
+    }
+}
+
+@mixin d15 {
+    @media (max-width: #{$d15}){
+        @content;
+    }
+}
+
+@mixin d16 {
+    @media (max-width: #{$d16}){
+        @content;
+    }
+}
+
+@mixin d17 {
+    @media (max-width: #{$d17}){
+        @content;
+    }
+}
+
+// Promenljive
+
+$f : flex;
+$c : center;
+$sa : space-around;
+$sb : space-between;
+$fs : flex-start;
+$fe : flex-end;
+$co : column;
+$fw : wrap;
+
+
+html{
+
+    max-width: 100%;
+    width : 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: #141414;
+    overflow-x : hidden;
+    overflow-y: hidden;
+
+    body{
+
+        width : 100%;
+        position: relative;
+        overflow-x : hidden;
+
+        // Preloader
+
+        .preloader{
+
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: 2000;
+            background-color: #141414;
+            display: $f;
+            justify-content: $c;
+            align-items: $c;
+
+
+            .dotTransformer{
+
+                position: absolute;
+                width: 13px;
+                height: 13px;
+                bottom : -10%;
+                border-radius: 50%;
+                background-color: whitesmoke;
+                animation: preloaderAnimacija 2s;
+                animation-delay: .6s;
+                animation-fill-mode: forwards;
+            
+            }
+
+
+            #logoSigmaBigger{
+
+                width : 15%;
+                z-index: 2001;
+                opacity: 0;
+                animation: messageAndCircleShower 1s;
+                animation-fill-mode: forwards;
+                animation-delay: .3s;
+
+                @include d14{
+
+                    width : 25%;
+
+                }
+
+                @include d17{
+                    
+                    width: 30%;
+
+                }
+
+            }
+
+        }
+
+        // Envelope
+
+        #envelopeButton{
+
+            position: fixed;
+            width : 60px;
+            height: 60px;
+            z-index: 999;
+            background-color: tomato;
+            border-radius: 50%;
+            display: $f;
+            justify-content: $c;
+            align-items: $c;
+            text-decoration: none;
+            bottom : 3%;
+            right : -10%;
+            transition: .6s;
+
+            @include d14{
+
+                right : -15%;
+
+            }
+
+            @include d16{
+
+                right : -20%;
+
+            }
+
+            &:hover{
+
+                background-color: lighten(tomato, 5%);
+                transform: rotate(360deg);
+
+            }
+            
+            i{
+
+                font-size : 1.5em;
+                color : whitesmoke;
+
+            }
+
+        }
+
+        .envelopeAdd{
+
+            bottom : 3% !important;
+            right : 2.5% !important;
+
+        }
+
+        // Main sekcija
+
+        main{
+
+            width: 100%;
+            height: 100vh;
+            background-image: url("../images/SigmaWallpaperSmaller.svg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: $f;
+            align-items: $c;
+            justify-content: $fe;
+            position: relative;
+            overflow-x: hidden;
+
+            @include d14{
+
+                background-position: 80%;
+
+            }
+
+            // Robot Guide Main
+
+            .robotGuideMain{
+
+                position : absolute;
+                left : 0%;
+                top : 65%;
+                z-index: 999;
+
+                @include d14{
+
+                    top : 80%;
+
+                }
+
+                @include d17{
+
+                    top : 80%;
+
+                }
+
+                .robotGuideRotateDivMain{
+
+                    transform: translateX(-100%);
+                    // animation : robotGuideLeftTranslate 8s;
+                    // animation-fill-mode: forwards;
+                    transition: 1s;
+
+                    img{
+
+                        width : 23% !important;
+                        // animation: robotGuideLeftRotate 8s;
+                        // animation-fill-mode: forwards;
+                        transition: 1s;
+    
+                    }
+
+                }
+
+                .circleOneMain{
+
+                    width : 8px;
+                    height: 8px;
+                    background-color: whitesmoke;
+                    border-radius: 50%;
+                    position: absolute;
+                    top : 5%;
+                    left : 23%;
+                    opacity: 0;
+                    // animation : messageAndCircleShower 1s;
+                    // animation-delay: 1.5s;
+                    // animation-fill-mode: forwards;
+
+                }
+
+                .circleTwoMain{
+
+                    width : 12px;
+                    height: 12px;
+                    background-color: whitesmoke;
+                    border-radius: 50%;
+                    position: absolute;
+                    top : -7%;
+                    left : 25%;
+                    opacity: 0;
+                    // animation : messageAndCircleShower 1s;
+                    // animation-delay: 1.9s;
+                    // animation-fill-mode: forwards;
+
+                    @include d17{
+
+                        top : 17%;
+                        left : 28%
+
+                    }
+
+                }
+
+                .messageBoxMain{
+
+                    width : 25%;
+                    position: absolute;
+                    left : 19%;
+                    top : -70%;
+                    background-color: whitesmoke;
+                    border-radius: 15px;
+                    padding : 2%;
+                    opacity: 0;
+                    // animation : messageAndCircleShower 1s;
+                    // animation-delay: 2.3s;
+                    // animation-fill-mode: forwards;
+
+                    @include d17{
+
+                        top : 0%;
+                        left : 35%;
+
+                    }
+
+                    p{
+
+                        font-weight: bold;
+                        padding : 2%;
+                        text-align: $c;
+                        line-height: 20px;
+                        letter-spacing: 1.2px;
+
+                        @include d17{
+
+                            font-size: .9em;
+
+                        }
+
+                    }
+
+                }
+
+
+            }
+
+
+            // Logo Sigma
+
+                #logoSigma{
+
+                    position: absolute;
+                    top : 4%;
+                    left : 8%;
+                    width : 9%;
+
+                    @include d2{
+
+                        width : 6%;
+                        top : 7%;
+
+                    }
+
+                    @include d6{
+
+                        width : 8%;
+                        top : 9%;
+
+                    }
+
+                    @include d13{
+
+                        width : 11%;
+                        top : 9%;
+
+                    }
+
+                    @include d15{
+
+                        width : 15%;
+                        top : 7%;
+
+                    }
+
+                }
+
+            // Riding robot
+                
+                #movingRobotMainSvg{
+
+                    position: absolute;
+                    transform: rotate(-90deg);
+                    width : 9%;
+                    animation: movingRobotMain 5s infinite;
+                    animation-fill-mode: forwards;
+
+                    @include d2{
+
+                        width : 5.5%;
+
+                    }
+
+                    @include d4{
+
+                        width : 7%;
+
+                    }
+
+                    @include d8{
+
+                        width : 8%;
+
+                    }
+
+                    @include d11{
+
+                        width : 8.5%;
+
+                    }
+
+                    @include d13{
+
+                        width : 10%;
+
+                    }
+
+                    @include d14{
+
+                        width : 12%;
+
+                    }
+
+                    @include d15{
+
+                        display: none;
+
+                    }
+
+                }
+
+            // Robotic handle
+
+                #roboticArmSvg{
+
+                    display: block;
+                    position: absolute;
+                    bottom : 15%;
+                    right : 28%;
+                    width : 10%;
+
+                    @include d2{
+
+                        width : 5%;
+                        right : 27%;
+
+                    }
+
+                }
+
+            // Cookies maker
+
+                #cookiesMakerSvg{
+
+                    position: absolute;
+                    width : 5%;
+                    right : -10%;
+                    bottom : 13.8%;
+                    z-index: 999;
+                    animation : iceCreamAnimation 5s infinite;
+                    animation-delay: 1.5s;
+
+                    @include d2{
+
+                        width : 2.5%;
+
+                    }
+                    
+                }
+
+            // Spoon
+
+            #woodenSpoonSvg{
+
+                position: absolute;
+                width : 2.3%;
+                right : -10%;
+                bottom : 16.5%;
+                transform : rotate(-180deg);
+                animation : spoonAnimation 5s infinite;
+                animation-delay: 1.5s;
+
+            }
+
+            // Trailer
+
+            #trailerSvg{
+
+                position: absolute;
+                display: $f;
+                flex-direction: $co;
+                justify-content: $fe;
+                align-items: $fe;
+                width : 8%;
+                right : 24%;
+                bottom : 0%;
+                animation : trailerAnimation 5s infinite;
+                animation-fill-mode: forwards;
+                animation-delay: 3s;
+
+                @include d2{
+
+                    width : 4%;
+                    right : 22%;
+
+                }
+
+            }
+
+            // Truck
+
+            #truckSvg{
+
+                position: absolute;
+                display: $f;
+                flex-direction: $co;
+                justify-content: $fe;
+                align-items: $fe;
+                width : 8%;
+                right : 16.2%;
+                bottom : .9%;
+                animation : truckAnimation 5s infinite;
+                animation-fill-mode: forwards;
+                animation-delay: 3s;
+
+            }
+
+
+            // Heading i button
+
+            .infoMain{
+
+                width : 60%;
+                display: $f;
+                flex-direction: $co;
+                justify-content: $c;
+                align-items: $c;
+
+                @include d14{
+
+                    width : 100%;
+
+                }
+
+
+                h1{
+
+                    color : whitesmoke;
+                    letter-spacing: 2.8px;
+                    font-size: 3.3em;
+                    text-align: $c;
+
+                    @include d6{
+
+                        font-size: 3em;
+
+                    }
+
+                    @include d13{
+
+                        font-size: 2.6em;
+
+                    }
+
+                    @include d16{
+
+                        font-size: 2.3em;
+
+                    }
+
+                    @include d17{
+
+                        font-size: 2.5em;
+
+                    }
+
+                    #sigmaHeadingSpan{
+
+                        background: linear-gradient(270deg, #f7971e, #ffd200, #fdc830, #f37335);
+                        background-size: 800% 800%;
+                        animation: MainHeadingGradient 4s ease infinite;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        position: relative;
+                        font-size: 1.2em;
+                        letter-spacing: 3.9px;
+
+                        @include d16{
+
+                            font-size: 1em;
+
+                        }
+
+                        @include d17{
+
+                            font-size: 1.2em;
+
+                        }
+
+                    }
+
+                }
+
+                #letsTalkMain{
+
+                    width : 50%;
+                    background-color: tomato;
+                    color : whitesmoke;
+                    outline: none;
+                    text-align: $c;
+                    text-decoration: none;
+                    border-radius: 20px;
+                    font-size: 1.3em;
+                    letter-spacing: 2px;
+                    line-height: 2.9em;
+                    margin-top: 1%;
+                    transition : .6s;
+                    transform : translateX(0px);
+
+                    @include d2{
+
+                        width : 35%;
+
+                    }
+
+                    @include d6{
+
+                        width : 45%;
+
+                    }
+
+                    @include d11{
+
+                        width : 60%;
+
+                    }
+
+                    @include d13{
+
+                        width : 60%;
+                        margin-top: 2%;
+
+                    }
+
+                    @include d17{
+
+                        width : 80%;
+                        margin-top: 4%;
+
+                    }
+
+                    &:hover{
+
+                        background-color: whitesmoke;
+                        color : tomato;
+
+                    }
+
+                }
+
+                .letsTalkMainRemove{
+
+                    transform : translateX(1500px) !important;
+
+                }
+
+            }
+
+        }
+
+        ///////// Kraj Maina
+
+        
+        // What We Do sekcija
+
+        .whatWeDo{
+
+            width: 100%;
+            padding-top : 10%;
+            display: $f;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+            position: relative;
+
+            @include d2{
+
+                padding-top: 7%;
+
+            }
+
+            @include d11{
+
+                padding-top: 10%;
+
+            }
+
+
+            // Robot Guide What We Do
+
+            .robotGuideWhatWeDo{
+
+                position : absolute;
+                right : 0%;
+                top : 28%;
+                z-index: 999;
+
+                @include d11{
+
+                    top : 36%;
+
+                }
+
+                @include d13{
+
+                    top : 25%;
+
+                }
+
+                @include d16{
+
+                    top : 22%;
+
+                }
+
+                .robotGuideRotateDivWhatWeDo{
+                    
+                    display: $f;
+                    justify-content: $fe;
+                    transform: translateX(100%);
+                    // animation : robotGuideLeftTranslate 8s;
+                    // animation-fill-mode: forwards;
+                    transition: 1s;
+
+                    img{
+
+                        transform: rotate(-45deg);
+                        width : 23%;
+                        // animation: robotGuideLeftRotate 8s;
+                        // animation-fill-mode: forwards;
+                        transition: 1s;
+    
+                    }
+
+                }
+
+                .circleOneWhatWeDo{
+
+                    width : 8px;
+                    height: 8px;
+                    background-color: whitesmoke;
+                    border-radius: 50%;
+                    position: absolute;
+                    top : 5%;
+                    right : 23%;
+                    opacity: 0;
+                    // animation : messageAndCircleShower 1s;
+                    // animation-delay: 1.5s;
+                    // animation-fill-mode: forwards;
+
+                    @include d17{
+
+                        top : -10%;
+                        right : 17%;
+
+                    }
+
+                }
+
+                .circleTwoWhatWeDo{
+
+                    width : 12px;
+                    height: 12px;
+                    background-color: whitesmoke;
+                    border-radius: 50%;
+                    position: absolute;
+                    top : -7%;
+                    right : 25%;
+                    opacity: 0;
+                    // animation : messageAndCircleShower 1s;
+                    // animation-delay: 1.9s;
+                    // animation-fill-mode: forwards;
+
+                    @include d17{
+
+                        top : -40%;
+                        right : 15%;
+
+                    }
+
+                }
+
+                .messageBoxWhatWeDo{
+
+                    width : 25%;
+                    position: absolute;
+                    right : 19%;
+                    top : -75%;
+                    background-color: whitesmoke;
+                    border-radius: 15px;
+                    padding : 2%;
+                    opacity: 0;
+                    // animation : messageAndCircleShower 1s;
+                    // animation-delay: 2.3s;
+                    // animation-fill-mode: forwards;
+
+                    @include d17{
+
+                        top : -127%;
+                        right: 3%;
+
+                    }
+
+                    p{
+
+                        font-weight: bold;
+                        padding : 2%;
+                        text-align: $c;
+                        line-height: 20px;
+                        letter-spacing: 1.2px;
+
+                        @include d17{
+
+                            font-size: .7em;
+
+                        }
+
+                    }
+
+                }
+
+
+            }
+
+
+            .whatWeDoBoxes{
+
+                display: $f;
+                justify-content: $sa;
+                width : 85%;
+                flex-wrap: $fw;
+                margin-top : 10%;
+
+                @include d2{
+
+                    margin-top: 5%;
+
+                }
+
+                @include d11{
+
+                    margin-top: 6%;
+
+                }
+
+                @include d13{
+
+                    margin-top: 10%;
+
+                }
+
+                & > .whatWeDoBox:first-child{
+
+                    background-image: url('../images/boxOneImage.png');
+                    background-position: 10% 0%;
+
+                }
+
+                & > .whatWeDoBox:first-child > i{
+
+                    background: linear-gradient(270deg, #ffd001, yellow);
+                    background-size: 600% 600%;
+                    animation: MainHeadingGradient 2s ease infinite;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                }
+
+                & > .whatWeDoBox:nth-child(2){
+
+                    background-image: url('../images/boxTwoImage.png');
+                    background-position:10%;
+
+                }
+
+                & > .whatWeDoBox:nth-child(2) > i{
+
+                    color : #141414;
+                    animation: gearRotate 4s infinite;
+
+                }
+
+                & > .whatWeDoBox:last-child{
+
+                    background-image: url('../images/boxTwoImage.png');
+                    background-position: 55% 70%;
+
+                }
+
+                .whatWeDoBox{
+
+                    width : 40%;
+                    height : 500px;
+                    margin : 4% 0%;
+                    border-radius: 15px;
+                    background-repeat: no-repeat;
+                    display: $f;
+                    flex-direction: $co;
+                    justify-content: $sa;
+                    align-items: $c;
+                    color : whitesmoke;
+                    position: relative;
+
+                    @include d2{
+
+                        margin: 3% 0%;
+
+                    }
+
+                    @include d13{
+
+                        width : 80%
+
+                    }
+
+                    @include d14{
+
+                        margin : 5% 0%;
+
+                    }
+
+                    @include d17{
+
+                        width : 90%
+
+                    }
+
+                    // Roboti za boxove
+
+                    #robotBoxOne{
+
+                        position: absolute;
+                        z-index: 1000 !important;
+                        width : 30%;
+                        top : -10%;
+                        transform: rotate(-25deg);
+                        left : -10%;
+
+                        @include d2{
+
+                            width : 20%;
+
+                        }
+
+                        @include d6{
+
+                            width : 25%;
+
+                        }
+
+                        @include d8{
+
+                            width : 30%;
+
+                        }
+
+                        @include d11{
+
+                            width : 27%;
+
+                        }
+
+                        @include d13{
+
+                            width : 20%;
+                            top : -13%;
+
+                        }
+
+                        @include d14{
+
+                            width : 23%;
+                            top : -10%;
+
+                        }
+
+                        @include d16{
+
+                            width : 27%;
+                            top : -7%;
+
+                        }
+
+                    }
+
+                    #robotBoxTwo{
+
+                        position: absolute;
+                        width : 15%;
+                        top : 53%;
+
+                    }
+
+                    #robotBoxThree{
+
+                        position: absolute;
+                        z-index: 1000 !important;
+                        width : 20%;
+                        top : 5%;
+                        transform: rotate(90deg);
+                        right : -20%;
+                        animation : moveWalle 4s infinite;
+
+                        @include d2{
+
+                            width : 12%;
+                            right : -12%;
+
+                        }
+
+                        @include d4{
+
+                            width : 15%;
+                            right : -15%;
+
+                        }
+
+                        @include d8{
+
+                            width : 18%;
+                            right : -18%;
+
+                        }
+
+                        @include d11{
+
+                            width : 21%;
+                            right : -21%;
+
+                        }
+
+                        @include d13{
+
+                            width : 14%;
+                            right : -14%;
+
+                        }
+
+                        @include d14{
+
+                            width : 16%;
+                            right : -16%;
+
+                        }
+
+                        @include d16{
+
+                            width : 18%;
+                            right : -18%;
+
+                        }
+
+                        @include d17{
+
+                            width : 14%;
+                            right : -14%;
+
+                        }
+
+                    }
+
+
+
+                    ////////
+
+                    h3{
+
+                        font-size: 1.7em;
+                        letter-spacing: 3px;
+                        text-align: $c;
+
+                    }
+
+                    p{
+
+                        text-align: $c;
+                        padding: 0% 3%;
+                        letter-spacing: 1.4px;
+                        font-size : 1.1em;
+                        font-weight: bold;
+
+                        @include d2{
+
+                            font-size: 1.5em;
+
+                        }
+
+                        @include d6{
+
+                            font-size: 1.4em;
+
+                        }
+
+                        @include d8{
+
+                            font-size: 1.2em;
+
+                        }
+
+                        @include d17{
+
+                            font-size: 1em;
+
+                        }
+
+                    }
+
+                    i{
+
+                        font-size: 2.4em;
+                        
+                        @include d2{
+
+                            font-size: 3.3em;
+
+                        }
+
+                        @include d6{
+
+                            font-size: 2.8em;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+
+        //// Sekcija How We Work
+
+        .howWeWork{
+
+            width : 100%;
+            display: $f;
+            flex-direction: $co;
+            align-items: $c;
+            justify-content: $c;
+            text-align: $c;
+            padding-top : 10%;
+            position: relative;
+
+            @include d2{
+
+                padding-top: 5%;
+
+            }
+
+            @include d11{
+
+                padding-top: 7%;
+
+            }
+
+            // Robot Guide How We Work
+
+            .robotGuideHowWeWork{
+
+                position : absolute;
+                left : 0%;
+                top : 33%;
+                z-index: 999;
+
+                @include d13{
+
+                    top : 22%;
+
+                }
+
+                @include d15{
+
+                    top : 19%;
+
+                }
+
+                @include d17{
+
+                    top : 20.5%;
+
+                }
+
+                .robotGuideRotateDivHowWeWork{
+
+                    transform: translateX(-100%);
+                    // animation : robotGuideLeftTranslate 8s;
+                    // animation-fill-mode: forwards;
+                    transition: 1s;
+                    display: $f;
+                    justify-content: $fs;
+
+                    img{
+
+                        width : 23% !important;
+                        // animation: robotGuideLeftRotate 8s;
+                        // animation-fill-mode: forwards;
+                        transition: 1s;
+    
+                    }
+
+                }
+
+                .circleOneHowWeWork{
+
+                    width : 8px;
+                    height: 8px;
+                    background-color: whitesmoke;
+                    border-radius: 50%;
+                    position: absolute;
+                    top : 5%;
+                    left : 23%;
+                    opacity: 0;
+                    // animation : messageAndCircleShower 1s;
+                    // animation-delay: 1.5s;
+                    // animation-fill-mode: forwards;
+
+                    @include d17{
+
+                        left : 17%;
+                        top : -9%
+
+                    }
+
+                }
+
+                .circleTwoHowWeWork{
+
+                    width : 12px;
+                    height: 12px;
+                    background-color: whitesmoke;
+                    border-radius: 50%;
+                    position: absolute;
+                    top : -7%;
+                    left : 25%;
+                    opacity: 0;
+                    // animation : messageAndCircleShower 1s;
+                    // animation-delay: 1.9s;
+                    // animation-fill-mode: forwards;
+
+                    @include d17{
+
+                        left : 18%;
+                        top : -34%
+
+                    }
+
+                }
+
+                .messageBoxHowWeWork{
+
+                    width : 25%;
+                    position: absolute;
+                    left : 19%;
+                    top : -75%;
+                    background-color: whitesmoke;
+                    border-radius: 15px;
+                    padding : 2%;
+                    opacity: 0;
+                    // animation : messageAndCircleShower 1s;
+                    // animation-delay: 2.3s;
+                    // animation-fill-mode: forwards;
+
+                    @include d17{
+
+                        left : 5%;
+                        top : -148%;
+
+                    }
+
+                    p{
+
+                        font-weight: bold;
+                        padding : 2%;
+                        text-align: $c;
+                        line-height: 20px;
+                        letter-spacing: 1.2px;
+
+                        @include d17{
+
+                            font-size: .9em;
+
+                        }
+
+                    }
+
+                }
+
+
+            }
+
+            .howWeWorkBlock{
+
+                width: 60%;
+
+                p{
+
+                    color : whitesmoke;
+                    font-weight: bold;
+                    font-size : 1.2em;
+                    padding : 7% 0%;
+                    letter-spacing: 1.3px;
+                    text-shadow: 2px 2px #000;
+
+                    @include d2{
+
+                        font-size: 1.5em;
+
+                    }
+                    
+                    @include d11{
+
+                        font-size: 1.3em;
+
+                    }
+
+                    @include d15{
+
+                        font-size: 1.1em;
+
+                    }
+
+                }
+
+                img{
+
+                    @include d17{
+
+                        margin: 7% 0%;
+
+                    }
+
+                }
+
+                .goalsPriorities{
+
+                    h4{
+
+                        color : orange;
+                        letter-spacing: 2px;
+                        font-size: 1.6em;
+                        padding : 5% 0%;
+
+                        @include d2{
+
+                            font-size: 2em;
+
+                        }
+
+                    }
+
+                    p{
+
+                        padding: 0%;
+
+                    }
+
+                }
+
+            }
+
+            .processOfMakingBlock{
+
+                margin-top: 8%;
+
+                h3{
+
+                    color : orange;
+                    font-size: 2em;
+                    letter-spacing: 1.4px;
+
+                }
+
+                .stepsBoxes{
+
+                    width : 90%;
+                    margin: 5% auto;
+                    display: $f;
+                    justify-content: $sa;
+                    flex-wrap: $fw;
+                    align-items: $c;
+
+
+                    & > .stepBox:nth-child(2)::before{
+
+                        position: absolute;
+                        content : '';
+                        width : 30%;
+                        background-color: whitesmoke;
+                        height : 4px;
+                        top : 30%;
+                        left : -25%;
+
+                        @include d13{
+
+                            background-color: orange;
+                            top : 50%;
+
+                        }
+
+                        @include d16{
+
+                            background-color: orange;
+                            top : 50%;
+                            left: -15%;
+
+                        }
+
+                        @include d17{
+
+                            width : 20%;
+                            top : 45%;
+
+                        }
+
+                    }
+
+                    & > .stepBox:nth-child(2)::after{
+
+                        position: absolute;
+                        content : '';
+                        width : 30%;
+                        background-color: whitesmoke;
+                        height : 4px;
+                        top : 30%;
+                        right : -25%;
+
+                        @include d13{
+
+                            background-color: orange;
+                            top : 50%;
+
+                        }
+
+                        @include d16{
+
+                            background-color: orange;
+                            top : 50%;
+                            right: -15%;
+
+                        }
+                        
+                        @include d17{
+
+                            width : 20%;
+                            top : 45%;
+
+                        }
+
+                    }
+
+                    .stepBox{
+
+                        width : 30%;
+                        display: $f;
+                        flex-direction: $co;
+                        justify-content: $sb;
+                        align-items: $c;
+                        position: relative;
+
+                        @include d13{
+
+                            width : 60%;
+                            margin: 4% 0%;
+
+                        }
+
+                        @include d16{
+
+                            width : 80%;
+                            margin: 7% 0%;
+
+                        }
+
+                        h4{
+
+                            color : orange;
+                            font-size: 1.4em;
+                            padding : 7% 0%;
+                            letter-spacing: 1.3px;
+
+                            @include d2{
+
+                                font-size: 1.8em;
+
+                            }
+
+                        }
+
+                        p{
+
+                            color : whitesmoke;
+                            font-weight: bold;
+                            letter-spacing: 1.3px;
+
+                            @include d2{
+
+                                font-size: 1.4em;
+
+                            }
+
+                            @include d8{
+
+                                font-size: 1.15em;
+
+                            }
+
+                            @include d11{
+
+                                font-size: 1.04em;
+
+                            }
+
+                            @include d13{
+
+                                font-size: 1.2em;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+        
+        // Projekti
+
+        .projects{
+
+            display: $f;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+            padding-top: 10%;
+
+            @include d2{
+
+                padding-top: 5%;
+
+            }
+
+            @include d13{
+
+                padding-top: 3%;
+
+            }
+            
+            .projectBoxes{
+
+                width : 80%;
+                margin-top: 5%;
+
+                @include d2{
+
+                    margin-top: 3%;
+
+                }
+
+                @include d14{
+
+                    width : 85%;
+
+                }
+
+                & > .projectBox:first-child > .projectRobot{
+
+                    animation: projectRobotAnimation 2s infinite;
+
+                }
+
+                & > .projectBox:nth-child(2) > .projectRobot{
+
+                    animation: projectRobotAnimation 2s infinite;
+                    animation-delay: .5s;
+
+                }
+
+                & > .projectBox:last-child > .projectRobot{
+
+                    animation: projectRobotAnimation 2s infinite;
+                    animation-delay: 1s;
+
+                }
+
+                & > .projectBox:nth-child(odd){
+
+                    border-top-left-radius: 12px;
+                    border-bottom-left-radius: 12px;
+                    // animation : oddProjectTranslate 2s;
+                    // animation-fill-mode: forwards;
+                    transform: translateX(-30px);
+
+                    @include d15{
+
+                        transform: translateX(-40px);
+
+                    }
+
+                    @include d17{
+
+                        transform: translateX(-33px);
+
+                    }
+
+                }
+
+                & > .projectBox:nth-child(odd) > .projectRobot{
+
+                    position: absolute;
+                    transform: scale(-1,1);
+                    width : 20%;
+                    right : -19%;
+                    top : 20%;
+
+                }
+
+                & > .projectBox:nth-child(odd) > .projectPicture{
+
+                    display: $f;
+                    justify-content: $fs;
+                    border-top-right-radius: 12px;
+                    border-bottom-right-radius: 12px;
+
+                }
+
+                & > .projectBox:nth-child(even) > .projectPicture{
+
+                    display: $f;
+                    justify-content: $fe;
+                    border-top-right-radius: 12px;
+                    border-bottom-right-radius: 12px;
+
+                }
+
+                & > .projectBox:nth-child(odd) > .projectPicture > img{
+
+                    border-top-right-radius: 12px;
+                    border-bottom-right-radius: 12px;
+
+                }
+
+                & > .projectBox:nth-child(even){
+
+                    border-top-right-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                    // animation: evenProjectTranslate 2s;
+                    // animation-fill-mode: forwards;
+                    transform: translateX(30px);
+
+                    @include d15{
+
+                        transform: translateX(40px);
+
+                    }
+
+                    @include d17{
+
+                        transform: translateX(33px);
+
+                    }
+
+                }
+
+                & > .projectBox:nth-child(even) > .projectRobot{
+
+                    position: absolute;
+                    width : 20%;
+                    left : -19%;
+                    top : 20%;
+
+                }
+
+                & > .projectBox:nth-child(even) > .projectPicture{
+
+                    order : 1;
+
+                }
+
+                & > .projectBox:nth-child(even) > .projectInfo{
+
+                    order : 2;
+
+                }
+
+                & > .projectBox:nth-child(even) > .projectPicture > img{
+
+                    border-top-left-radius: 12px;
+                    border-bottom-left-radius: 12px;
+
+                }
+                
+                .projectBox{
+
+                    width : 80%;
+                    display: $f;
+                    background-color: lighten(#141414, .2%);
+                    margin: 5% auto;
+                    position: relative;
+                    border-radius: 12px;
+
+                    @include d2{
+
+                        width: 65%;
+
+                    }
+
+                    @include d4{
+
+                        width : 70%;
+
+                    }
+
+                    @include d8{
+
+                        width : 80%;
+
+                    }
+
+                    @include d13{
+
+                        width : 90%;
+                        margin: 7% auto;
+
+                    }
+
+                    @include d15{
+
+                        width : 95%;
+                        margin: 7% auto;
+                        background-color: lighten(#141414, .6%);
+
+                    }
+
+                    @include d16{
+
+                        margin: 10% auto;
+
+                    }
+                    
+                    .projectInfo{
+
+                        width : 60%;
+                        display: $f;
+                        flex-direction: $co;
+                        justify-content: $sa;
+                        align-items: $c;
+
+                        h4{
+
+                            color : orange;
+                            font-size: 1.8em;
+                            letter-spacing: 2px;
+
+                            @include d16{
+
+                                font-size: 1.4em;
+
+                            }
+
+                            @include d17{
+
+                                font-size: 1.2em;
+
+                            }
+
+                        }
+
+                        p{
+
+                            color: whitesmoke;
+                            font-size: 1.3em;
+                            letter-spacing: 1.4px;
+                            text-shadow: 2px 2px #000;
+
+                            @include d15{
+
+                                padding : 10% 0%;
+
+                            }
+
+                            @include d16{
+
+                                font-size: 1.2em;
+
+                            }
+
+                            @include d17{
+
+                                font-size: 1em;
+
+                            }
+
+                        }
+
+                        a{
+
+                            width : 50%;
+                            text-align: $c;
+                            background-color: tomato;
+                            line-height: 3.5em;
+                            border-radius: 12px;
+                            text-decoration: none;
+                            color: whitesmoke;
+                            font-weight: bold;
+                            letter-spacing: 1.2px;
+                            transition: .6s;
+                            outline: none;
+
+                            @include d15{
+
+                                width: 70%;
+                                line-height: 3em;
+                                margin-bottom: 1%;
+                                
+                            }
+
+                            @include d16{
+
+                                line-height: 2.7em;
+
+                            }
+
+                            @include d16{
+
+                                line-height: 2.2em;
+                                font-size: .8em;
+
+                            }
+
+                            &:hover{
+
+                                background-color: whitesmoke;
+                                color : tomato;
+
+                            }
+
+                        }
+
+                    }
+
+                    .projectPicture{
+
+                        width : 40%;
+
+                        img{
+
+                            width: 100%;
+                            max-width: 100%;
+                            max-height: 100%;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        //////////
+
+
+        // Kontakt forma
+
+        .contact{
+
+            width : 100%;
+            padding-top : 10%;
+
+            @include d2{
+
+                padding-top: 5%;
+
+            }
+
+            .formAndSvgs{
+
+                width : 90%;
+                margin: 5% auto;
+                display: $f;
+                flex-wrap: $fw;
+                justify-content: $sa;
+                align-items: $c;
+
+                .contactForm{
+
+                    width : 50%;
+                    background-image: url('../images/contactFormCover.svg');
+                    padding: 1.5%;
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 12px;
+
+                    @include d2{
+
+                        width: 30%;
+
+                    }
+
+                    @include d4{
+
+                        width : 40%;
+
+                    }
+
+                    @include d8{
+
+                        width : 45%;
+
+                    }
+
+                    @include d13{
+
+                        width : 55%;
+
+                    }
+                    
+                    @include d14{
+
+                        width : 85%;
+                        margin: 3% 0% 7% 0%;
+
+                    }
+
+                    .frostedDiv{
+
+                        margin: 0% auto;
+                        box-shadow: 0 0 1rem 0 rgba(189, 189, 189, 0.2); 
+                        border-radius: 12px;
+                        position: relative;
+                        z-index: 1;
+                        background: inherit;
+                        overflow: hidden;
+                        display: $f;
+                        flex-direction: $co;
+                        justify-content: $c;
+                        align-items: $c;
+
+                        @include d16{
+
+                            padding : 4% 0%;
+
+                        }
+
+                        &::before{
+
+                            content: "";
+                            position: absolute;
+                            background: inherit;
+                            z-index: -1;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            box-shadow: inset 0 0 2000px rgba(44, 44, 44, .8);
+                            filter: blur(10px);
+                            margin: -20px;
+
+                        }
+
+                        .contactField{
+
+                            width : 60%;
+                            background-color: transparent;
+                            border: none;
+                            border-bottom: 3px solid orange;
+                            color : whitesmoke;
+                            padding: 1%;
+                            border-radius: 5px;
+                            margin: 5% 0%;
+                            outline: none;
+
+                            @include d17{
+
+                                margin: 10% 0%;
+
+                            }
+
+
+                            option{
+
+                                background-color: #141414;
+                                font-size: 1.3em;
+                                letter-spacing: 1.2px;
+    
+                            }
+
+
+                            &::placeholder{
+
+                                color: whitesmoke;
+                                font-size: 1.2em;
+
+                            }
+
+                        }
+
+                        .errorPar{
+
+                            color: tomato;
+                            font-weight: bold;
+                            letter-spacing: 1.2px;
+                            text-align: $c;
+                            font-size: 1.2em;
+                            padding : 0% 4%;
+                            display: none;
+
+                        }
+
+                        #infoContact{
+
+                            text-align: $c;
+                            font-weight: bold;
+                            color : whitesmoke;
+                            text-shadow: 1.4px 1.4px #000;
+                            font-size: 1.2em;
+                            letter-spacing: 1.2px;
+                            padding: 2% 10%;
+
+                            @include d11{
+
+                                padding : 5% 10%; 
+
+                            }
+
+                        }
+
+                        #completeFormButton{
+
+                            width: 45%;
+                            background-color: tomato;
+                            color: whitesmoke;
+                            border: none;
+                            border-radius: 9px;
+                            line-height: 3.1em;
+                            font-size: 1.1em;
+                            transition: .6s;
+                            color: whitesmoke;
+                            outline: none;
+                            cursor: pointer;
+                            margin: 5% 0%;
+
+                            @include d15{
+
+                                width : 80%;
+
+                            }
+
+                            &:hover{
+
+                                background-color: whitesmoke;
+                                color: tomato;
+
+                            }
+
+                        }
+
+                        #successFormPar{
+
+                            color: #94e651;
+                            font-weight: bold;
+                            font-size: 1.3em;
+                            padding-bottom: 4%;
+                            text-align: $c;
+                            letter-spacing: 1.2px;
+                            display: none;
+
+                        }
+
+                    }
+
+                }
+
+                .svgShower{
+
+                    width : 30%;
+                    background-color: orange;
+                    border-radius: 12px;
+                    overflow: hidden;
+
+                    @include d14{
+
+                        width : 50%;
+
+                    }
+
+                    .levelSvg{
+
+                        width : 100%;
+                        display: $f;
+                        justify-content: $sa;
+                        align-items: $c;
+                        margin: 22% 0%;
+                        overflow: hidden;
+                        transition: .8s;
+                        transform : translateX(1500px);
+
+                        @include d2{
+
+                            margin: 18% 0%;
+
+                        }
+
+                        @include d8{
+
+                            margin: 22% 0%;
+
+                        }
+
+                        @include d13{
+
+                            margin: 25% 0%;
+
+                        }
+
+                        @include d14{
+
+                            margin: 15% 0%;
+
+                        }
+
+                        @include d15{
+
+                            margin: 19% 0%;
+
+                        }
+
+                        @include d17{
+
+                            margin: 23% 0%;
+
+                        }
+
+                        img{
+
+                            width : 15%;
+
+                            @include d2{
+
+                                width : 10%;
+
+                            }
+
+                            @include d4{
+
+                                width : 12%;
+
+                            }
+
+                            @include d8{
+
+                                width : 13%;
+
+                            }
+
+                            @include d11{
+
+                                width : 15%;
+
+                            }
+
+                            @include d13{
+
+                                width : 18%;
+
+                            }
+
+                            @include d14{
+
+                                width : 15%;
+
+                            }
+
+                            @include d15{
+
+                                width : 18%;
+
+                            }
+
+                            @include d17{
+
+                                width : 25%;
+
+                            }
+    
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+
+
+        /////
+
+    }
+
+}
+
+.vert{
+
+    overflow-y: visible;
+
+}
+
+
+
+
+
+// Animacija za vatru u footeru
+
+footer{
+
+    width : 100%;
+    padding-top : 15%;
+    display: $f;
+    flex-direction: row;
+    justify-content: $sa;
+    align-items: $c;
+    flex-wrap: $fw;
+
+    @include d2{
+
+        padding-top: 7%;
+
+    }
+
+    @include d4{
+
+        padding-top: 10%;
+
+    }
+
+    @include d8{
+
+        padding-top: 13%;
+
+    }
+
+    @include d13{
+
+        padding-top: 16%;
+
+    }
+
+    @include d14{
+
+        padding-top: 19%;
+
+    }
+
+    @include d15{
+
+        padding-top: 29%;
+
+    }
+
+    @include d17{
+
+        padding-top: 40%;
+
+    }
+
+    .socials{
+
+        display: block;
+        width : 30%;
+        display: $f;
+        justify-content: $c;
+        align-items: $c;
+        height: 100%;
+
+        #instagramLink{
+
+        width: 20%;
+        display: $f;
+        justify-content: $c;
+        align-items: $c;
+        flex-direction: $co;
+        text-decoration: none;
+        position: relative;
+
+        @include d15{
+
+            width : 30%;
+
+        }
+
+        @include d17{
+
+            width : 50%;
+
+        }
+
+        &:hover > i{
+
+            color : tomato;
+
+        }
+
+        &:hover > .messageBoxFooter > p{
+
+            color : orange;
+
+        }
+
+            i{
+
+                font-size: 3em;
+                color : orange;
+                text-decoration: none;
+                order: 2;
+                margin: -8%;
+                transition: .6s;
+
+                @include d2{
+
+                    font-size: 3.4em;
+                    margin: -4%;
+
+                }
+
+                @include d15{
+
+                    font-size: 2.8em;
+                    margin: -8%;
+
+                }
+    
+            }
+    
+            img{
+    
+                width : 100%;
+                order : 1;
+
+                @include d2{
+
+                    width : 80%;
+                    
+                }
+
+                @include d13{
+
+                    width : 100%;
+                    
+                }
+
+                @include d15{
+
+                    width : 130%;
+                    
+                }
+    
+            }
+
+            .circleOneFooter{
+
+                position: absolute;
+                width : 7px;
+                height: 7px;
+                background-color: whitesmoke;
+                z-index: 999;
+                top : -10%;
+                right: -14%;
+                border-radius: 50%;
+
+                @include d2{
+
+                    right: 0%;
+
+                }
+
+                @include d13{
+
+                    right: -10%;
+                    top : -15%;
+
+                }
+
+            }
+
+            .circleTwoFooter{
+
+                position: absolute;
+                width : 11px;
+                height: 11px;
+                background-color: whitesmoke;
+                z-index: 999;
+                top : -25%;
+                right: -30%;
+                border-radius: 50%;
+
+                @include d2{
+
+                    right: -15%;
+
+                }
+
+                @include d13{
+
+                    right: -29%;
+                    top : -30%;
+
+                }
+
+            }
+
+            .messageBoxFooter{
+
+                position: absolute;
+                background-color: whitesmoke;
+                text-align: $c;
+                border-radius: 9px;
+                top : -80%;
+                right: -150%;
+                padding : 10% 20%;
+
+                @include d2{
+
+                    right : -100%;
+
+                }
+
+                @include d13{
+
+                    right : -130%;
+
+                }
+
+                @include d14{
+
+                    right : -170%;
+
+                }
+
+                p{
+
+                    color: #141414;
+                    font-size: 1.2em;
+                    transition: .6s;
+
+                    @include d2{
+
+                        font-size: 1.3em;
+
+                    }
+
+                    @include d8{
+
+                        font-size: 1.2em;
+
+                    }
+
+                    @include d13{
+
+                        font-size: 1.1em;
+
+                    }
+
+                    @include d14{
+
+                        font-size: 1em;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .firePlace{
+
+        width : 30%;
+        display: $f;
+        align-items: $c;
+        justify-content: $c;
+        position: relative;
+        margin-top: -10%;
+
+        @include d13{
+
+            margin-top: -6%;
+
+        }
+
+        #campingFireSvg{
+
+            width : 100%;
+
+            @include d2{
+
+                width: 70%;
+
+            }
+
+            @include d8{
+
+                width: 85%;
+
+            }
+
+            @include d13{
+
+                width: 90%;
+
+            }
+
+            @include d14{
+
+                width: 100%;
+
+            }
+
+            @include d17{
+
+                width: 150%;
+
+            }
+
+        }
+
+        #campingVanSvg{
+
+            position: absolute;
+            width : 30%;
+            right : -5%;
+            bottom : 10%;
+
+            @include d2{
+
+                width : 25%;
+                right: 0%;
+
+            }
+
+            @include d8{
+
+                width: 28%;
+
+            }
+
+            @include d13{
+
+                width: 33%;
+                right : -10%;
+
+            }
+
+            @include d15{
+
+                width: 39%;
+                right : -15%;
+
+            }
+
+            @include d17{
+
+                width: 39%;
+                right : -22%;
+
+            }
+
+        }
+
+        #campingRobotSvg{
+
+            position: absolute;
+            width : 20%;
+            left : 5%;
+            bottom : 10%;
+            transform : scale(-1,1);
+
+            @include d8{
+
+                width: 23%;
+
+            }
+
+            @include d13{
+
+                width: 30%;
+                left : -5%;
+
+            }
+
+            @include d15{
+
+                width: 40%;
+                left : -15%;
+
+            }
+
+            @include d17{
+
+                width: 40%;
+                left : -25%;
+
+            }
+
+        }
+
+    }
+
+    .copyrightSigma{
+
+        width : 50%;
+        padding: 8% 0% 5% 0%;
+
+        @include d2{
+
+            padding : 2% 0% 3% 0%;
+
+        }
+
+        @include d4{
+
+            padding : 4% 0% 3% 0%;
+
+        }
+
+        @include d14{
+
+            padding : 5% 0%;
+
+        }
+
+        @include d15{
+
+            padding : 9% 0%;
+
+        }
+
+        @include d17{
+
+            padding : 14% 0%;
+
+        }
+        
+        p{
+
+            text-align: $c;
+            color : orange;
+            font-size: 1.3em;
+            letter-spacing: 1.4px;
+            font-weight: bold;
+
+            @include d14{
+
+                font-size: 1.2em;
+
+            }
+
+            @include d17{
+
+                font-size: 1em;
+
+            }
+
+        }
+
+    }
+
+}
+
+// Animacija za tacku na naslovu
+
+.changedDot::after{
+
+    position: absolute;
+    content : '';
+    width : 12px;
+    height : 12px;
+    border-radius: 50%;
+    bottom : 80%;
+    right : 74.5%;
+    animation : movingDotMain 1s ease;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    background: linear-gradient(#F7971E, #FFD200);
+
+    @include d14{
+
+        width : 10px;
+        height: 10px;
+
+    }
+
+}
+
+
+
+// After za svaki H2 tag
+
+h2{
+
+    position: relative;
+    text-align: $c;
+    color: orange;
+    font-size: 2.5em;
+    letter-spacing: 3px;
+
+    @include d2{
+
+        font-size: 2.9em;
+
+    }
+
+    @include d4{
+
+        font-size: 2.5em;
+
+    }
+
+    @include d8{
+
+        font-size: 2.3em;
+
+    }
+
+    @include d15{
+
+        font-size: 2em;
+
+    }
+
+    @include d17{
+
+        padding: 7%;
+        font-size: 1.8em;
+        
+    }
+
+    // &::after{
+
+    //     position: absolute;
+    //     content : '';
+    //     width : 30%;
+    //     background-color: whitesmoke;
+    //     height: 3px;
+    //     bottom : -15%;
+    //     right : 35%;
+
+    // }
+
+}
+
+
+// Animacije
+
+@keyframes preloaderAnimacija{
+
+    0%{
+
+        bottom : -10%;
+
+    }
+
+    40%{
+
+        bottom : 70%;
+
+    }
+
+
+    65%{
+
+        width : 13px;
+        height: 13px;
+        bottom : 50%;
+
+    }
+
+    100%{
+
+        width : 100%;
+        height: 100%;
+        transform: scale(2);
+
+    }
+
+}
+
+@keyframes oddProjectTranslate{
+
+    0%{
+
+        transform: translateX(2500px);
+
+    }
+
+    100%{
+
+        transform: translateX(-30px);
+
+    }
+
+}
+
+@keyframes evenProjectTranslate{
+
+    0%{
+
+        transform: translateX(-2500px);
+
+    }
+
+    100%{
+
+        transform: translateX(30px);
+
+    }
+
+}
+
+@keyframes projectRobotAnimation{
+
+    0%{
+
+        top : 25%;
+
+    }
+
+    50%{
+
+        top : 15%;
+
+    }
+
+    100%{
+
+        top : 25%;
+
+    }
+
+}
+
+@keyframes messageAndCircleShower{
+
+    0%{
+
+        opacity : 0;
+
+    }
+
+    100%{
+
+        opacity : 1;
+
+    }
+
+}
+
+@keyframes robotGuideLeftTranslate{
+
+    0%{
+
+        transform: translateX(-100%);
+
+    }
+
+    10%{
+
+        transform: translateX(0);
+
+    }
+
+    25%{
+
+        transform: translateX(0);
+
+    }
+
+    50%{
+
+        transform: translateX(0);
+
+    }
+
+    75%{
+
+        transform: translateX(0);
+
+    }
+
+    100%{
+
+        transform: translateX(-100%);
+
+    }
+
+}
+
+@keyframes robotGuideLeftRotate{
+
+    0%{
+
+        transform: rotate(0deg);
+
+    }
+
+    10%{
+
+        transform: rotate(45deg);
+
+    }
+
+    25%{
+
+        transform: rotate(45deg);
+        
+    }
+
+    50%{
+
+        transform: rotate(45deg);
+
+    }
+
+    85%{
+
+        transform: rotate(45deg);
+
+    }
+
+    100%{
+
+        transform: rotate(0deg);
+
+    }
+
+}
+
+
+
+@keyframes robotGuideRightTranslate{
+
+    0%{
+
+        transform: translateX(100%);
+
+    }
+
+    10%{
+
+        transform: translateX(0);
+
+    }
+
+    25%{
+
+        transform: translateX(0);
+
+    }
+
+    50%{
+
+        transform: translateX(0);
+
+    }
+
+    75%{
+
+        transform: translateX(0);
+
+    }
+
+    100%{
+
+        transform: translateX(100%);
+
+    }
+
+}
+
+@keyframes robotGuideRightRotate{
+
+    0%{
+
+        transform: rotate(0deg);
+
+    }
+
+    10%{
+
+        transform: rotate(-45deg);
+
+    }
+
+    25%{
+
+        transform: rotate(-45deg);
+        
+    }
+
+    50%{
+
+        transform: rotate(-45deg);
+
+    }
+
+    85%{
+
+        transform: rotate(-45deg);
+
+    }
+
+    100%{
+
+        transform: rotate(0deg);
+
+    }
+
+}
+
+
+
+@keyframes moveWalle{
+
+    0%{
+
+        top : 10%;
+
+    }
+
+    50%{
+
+        top : 75%;
+
+    }
+
+    100%{
+
+        top : 10%;
+
+    }
+
+}
+
+@keyframes gearRotate{
+
+    0%{
+
+        transform: rotate(0deg);
+
+    }
+
+    50%{
+
+        transform: rotate(360deg);
+
+    }
+
+    100%{
+
+        transform: rotate(0deg);
+
+    }
+
+}
+
+@keyframes MainHeadingGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@keyframes trailerAnimation{
+
+    0%{
+
+        bottom : 0%;
+        right : 24%;
+
+    }
+
+    30%{
+
+        bottom : 0%;
+        right : 24%;
+
+    }
+
+    60%{
+
+        bottom : 0%;
+        right : -10%;
+
+    }
+
+    100%{
+
+        bottom : 0%;
+        right : 24%;
+
+    }
+
+}
+
+@keyframes truckAnimation{
+
+    0%{
+
+        bottom : .9%;
+        right : 16.2%;
+
+    }
+
+    30%{
+
+        bottom : .9%;
+        right : 16.2%;
+
+    }
+
+    60%{
+
+        bottom : .9%;
+        right : -18%;
+
+    }
+
+    100%{
+
+        bottom : .9%;
+        right : 16.2%;
+
+    }
+
+}
+
+@keyframes spoonAnimation{
+
+    0%{
+
+        bottom : 16.5%;
+        right : -17%;
+
+    }
+
+    33%{
+
+        bottom : 16.5%;
+        right : 25%;
+
+    }
+
+    50%{
+
+        bottom : 10.5%;
+        right : 25%;
+
+    }
+
+    60%{
+
+        bottom : 10.5%;
+        right : 25%;
+
+    }
+
+    100%{
+
+        bottom : 10.5%;
+        right : -17%;
+
+    }
+
+}
+
+@keyframes iceCreamAnimation{
+
+    0%{
+
+        right : -17%;
+        bottom : 13.8%;
+
+    }
+
+    33%{
+
+        bottom : 13.8%;
+        right : 26%;
+        color : #ff6347;
+
+    }
+
+    50%{
+
+        bottom : 8%;
+        right : 26%;
+
+    }
+
+    59.3%{
+
+        bottom : 8%;
+        right : 26%;
+
+    }
+
+    100%{
+
+        bottom : 8%;
+        right : -17%;
+
+    }
+
+}
+
+@keyframes rotatingRoboticArm{
+
+    0%{
+
+        transform: scale(1);
+
+    }
+
+    50%{
+
+        transform: scale(-1, 1);
+
+    }
+
+    100%{
+
+        transform: scale(1);
+
+    }
+
+}
+
+@keyframes movingDotMain{
+
+    0%{
+
+        bottom : 80%;
+        right : 74.5%;
+
+    }
+    
+    50%{
+
+        bottom : 80%;
+        right : 5.5%;
+
+    }
+
+    100%{
+
+        bottom : 30%;
+        right : -8%;
+
+    }
+
+
+}
+
+
+@keyframes movingRobotMain{
+
+    0%{
+
+        top : 10%;
+
+    }
+
+    50%{
+
+        top : 20%;
+
+    }
+
+    100%{
+
+        top : 10%;
+
+    }
+
+}
+
+
+// Skrolbar
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: lighten(#141414, 2%);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: orange;
+    border-radius: 5px;
+  }
+
+
+  // Selection
+
+  ::selection {
+
+    background-color: tomato;
+
+}
