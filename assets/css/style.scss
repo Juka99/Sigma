@@ -1432,6 +1432,7 @@ html{
                         letter-spacing: 2px;
                         font-size: 1.6em;
                         padding : 5% 0%;
+                        line-height: 44px;
 
                         @include d2{
 
@@ -1460,6 +1461,13 @@ html{
                     color : orange;
                     font-size: 2em;
                     letter-spacing: 1.4px;
+                    
+                    @include d15{
+
+                        padding : 0% 15%;
+                        line-height: 42px;
+
+                    }
 
                 }
 
@@ -1484,7 +1492,8 @@ html{
                         left : -25%;
 
                         @include d13{
-
+                            
+                            display: none;
                             background-color: orange;
                             top : 50%;
 
@@ -1553,7 +1562,6 @@ html{
 
                         @include d13{
 
-                            display: none;
                             width : 60%;
                             margin: 4% 0%;
 
@@ -2186,7 +2194,7 @@ html{
 
                         text-align: $c;
                         color: whitesmoke;
-                        font-size: 1.2em;
+                        font-size: 1.4em;
                         letter-spacing: 1.4px;
                         padding: 7% 3% 0% 3%;
 

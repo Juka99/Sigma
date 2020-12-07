@@ -1198,6 +1198,7 @@ html body .howWeWork .howWeWorkBlock .goalsPriorities h4 {
   letter-spacing: 2px;
   font-size: 1.6em;
   padding: 5% 0%;
+  line-height: 44px;
 }
 
 @media (max-width: 2560px) {
@@ -1218,6 +1219,13 @@ html body .howWeWork .processOfMakingBlock h3 {
   color: orange;
   font-size: 2em;
   letter-spacing: 1.4px;
+}
+
+@media (max-width: 576px) {
+  html body .howWeWork .processOfMakingBlock h3 {
+    padding: 0% 15%;
+    line-height: 42px;
+  }
 }
 
 html body .howWeWork .processOfMakingBlock .stepsBoxes {
@@ -1247,6 +1255,7 @@ html body .howWeWork .processOfMakingBlock .stepsBoxes > .stepBox:nth-child(2)::
 
 @media (max-width: 992px) {
   html body .howWeWork .processOfMakingBlock .stepsBoxes > .stepBox:nth-child(2)::before {
+    display: none;
     background-color: orange;
     top: 50%;
   }
@@ -1320,7 +1329,6 @@ html body .howWeWork .processOfMakingBlock .stepsBoxes .stepBox {
 
 @media (max-width: 992px) {
   html body .howWeWork .processOfMakingBlock .stepsBoxes .stepBox {
-    display: none;
     width: 60%;
     margin: 4% 0%;
   }
@@ -1936,7 +1944,7 @@ html body .contact .formAndSvgs .svgShower {
 html body .contact .formAndSvgs .svgShower h4 {
   text-align: center;
   color: whitesmoke;
-  font-size: 1.2em;
+  font-size: 1.4em;
   letter-spacing: 1.4px;
   padding: 7% 3% 0% 3%;
 }
