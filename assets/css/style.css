@@ -963,6 +963,7 @@ html body .whatWeDo .whatWeDoBoxes .whatWeDoBox h3 {
   font-size: 1.7em;
   letter-spacing: 3px;
   text-align: center;
+  line-height: 34px;
 }
 
 html body .whatWeDo .whatWeDoBoxes .whatWeDoBox p {
@@ -970,7 +971,6 @@ html body .whatWeDo .whatWeDoBoxes .whatWeDoBox p {
   padding: 0% 3%;
   letter-spacing: 1.4px;
   font-size: 1.1em;
-  font-weight: bold;
 }
 
 @media (max-width: 2560px) {
@@ -1167,7 +1167,6 @@ html body .howWeWork .howWeWorkBlock p {
   font-size: 1.2em;
   padding: 7% 0%;
   letter-spacing: 1.3px;
-  text-shadow: 2px 2px #000;
 }
 
 @media (max-width: 2560px) {
@@ -1280,6 +1279,7 @@ html body .howWeWork .processOfMakingBlock .stepsBoxes > .stepBox:nth-child(2)::
 
 @media (max-width: 992px) {
   html body .howWeWork .processOfMakingBlock .stepsBoxes > .stepBox:nth-child(2)::after {
+    display: none;
     background-color: orange;
     top: 50%;
   }
@@ -1320,6 +1320,7 @@ html body .howWeWork .processOfMakingBlock .stepsBoxes .stepBox {
 
 @media (max-width: 992px) {
   html body .howWeWork .processOfMakingBlock .stepsBoxes .stepBox {
+    display: none;
     width: 60%;
     margin: 4% 0%;
   }
@@ -1630,7 +1631,6 @@ html body .projects .projectBoxes .projectBox .projectInfo p {
   color: whitesmoke;
   font-size: 1.3em;
   letter-spacing: 1.4px;
-  text-shadow: 2px 2px #000;
 }
 
 @media (max-width: 576px) {
@@ -1732,7 +1732,6 @@ html body .contact .formAndSvgs .contactForm {
   width: 50%;
   background-image: url("../images/contactFormCover.svg");
   padding: 1.5%;
-  //background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 12px;
@@ -1873,7 +1872,6 @@ html body .contact .formAndSvgs .contactForm .frostedDiv #infoContact {
   text-align: center;
   font-weight: bold;
   color: whitesmoke;
-  text-shadow: 1.4px 1.4px #000;
   font-size: 1.2em;
   letter-spacing: 1.2px;
   padding: 2% 10%;
@@ -1931,7 +1929,21 @@ html body .contact .formAndSvgs .svgShower {
 
 @media (max-width: 768px) {
   html body .contact .formAndSvgs .svgShower {
-    width: 50%;
+    width: 70%;
+  }
+}
+
+html body .contact .formAndSvgs .svgShower h4 {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.2em;
+  letter-spacing: 1.4px;
+  padding: 7% 3% 0% 3%;
+}
+
+@media (max-width: 380px) {
+  html body .contact .formAndSvgs .svgShower h4 {
+    padding: 7% 5% 0% 5%;
   }
 }
 

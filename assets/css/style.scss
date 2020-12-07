@@ -1160,6 +1160,7 @@ html{
                         font-size: 1.7em;
                         letter-spacing: 3px;
                         text-align: $c;
+                        line-height: 34px;
 
                     }
 
@@ -1169,7 +1170,6 @@ html{
                         padding: 0% 3%;
                         letter-spacing: 1.4px;
                         font-size : 1.1em;
-                        font-weight: bold;
 
                         @include d2{
 
@@ -1393,7 +1393,6 @@ html{
                     font-size : 1.2em;
                     padding : 7% 0%;
                     letter-spacing: 1.3px;
-                    text-shadow: 2px 2px #000;
 
                     @include d2{
 
@@ -1520,6 +1519,7 @@ html{
 
                         @include d13{
 
+                            display: none;
                             background-color: orange;
                             top : 50%;
 
@@ -1553,6 +1553,7 @@ html{
 
                         @include d13{
 
+                            display: none;
                             width : 60%;
                             margin: 4% 0%;
 
@@ -1867,7 +1868,6 @@ html{
                             color: whitesmoke;
                             font-size: 1.3em;
                             letter-spacing: 1.4px;
-                            text-shadow: 2px 2px #000;
 
                             @include d15{
 
@@ -1985,7 +1985,7 @@ html{
                     width : 50%;
                     background-image: url('../images/contactFormCover.svg');
                     padding: 1.5%;
-                    background-attachment: fixed;
+                    //background-attachment: fixed;
                     background-repeat: no-repeat;
                     background-size: cover;
                     border-radius: 12px;
@@ -2111,7 +2111,6 @@ html{
                             text-align: $c;
                             font-weight: bold;
                             color : whitesmoke;
-                            text-shadow: 1.4px 1.4px #000;
                             font-size: 1.2em;
                             letter-spacing: 1.2px;
                             padding: 2% 10%;
@@ -2179,7 +2178,23 @@ html{
 
                     @include d14{
 
-                        width : 50%;
+                        width : 70%;
+
+                    }
+
+                    h4{
+
+                        text-align: $c;
+                        color: whitesmoke;
+                        font-size: 1.2em;
+                        letter-spacing: 1.4px;
+                        padding: 7% 3% 0% 3%;
+
+                        @include d17{
+
+                            padding: 7% 5% 0% 5%; 
+
+                        }
 
                     }
 
