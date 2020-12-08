@@ -80,7 +80,7 @@ html body #envelopeButton {
   position: fixed;
   width: 60px;
   height: 60px;
-  z-index: 999;
+  z-index: 1001;
   background-color: tomato;
   border-radius: 50%;
   display: -webkit-box;
@@ -223,6 +223,13 @@ html body main .robotGuideMain .messageBoxMain {
   border-radius: 15px;
   padding: 2%;
   opacity: 0;
+}
+
+@media (max-width: 480px) {
+  html body main .robotGuideMain .messageBoxMain {
+    top: -75%;
+    left: 19%;
+  }
 }
 
 @media (max-width: 380px) {
@@ -684,6 +691,13 @@ html body .whatWeDo .robotGuideWhatWeDo .circleTwoWhatWeDo {
   opacity: 0;
 }
 
+@media (max-width: 480px) {
+  html body .whatWeDo .robotGuideWhatWeDo .circleTwoWhatWeDo {
+    top: -13%;
+    right: 25%;
+  }
+}
+
 @media (max-width: 380px) {
   html body .whatWeDo .robotGuideWhatWeDo .circleTwoWhatWeDo {
     top: -40%;
@@ -702,6 +716,13 @@ html body .whatWeDo .robotGuideWhatWeDo .messageBoxWhatWeDo {
   opacity: 0;
 }
 
+@media (max-width: 480px) {
+  html body .whatWeDo .robotGuideWhatWeDo .messageBoxWhatWeDo {
+    top: -90%;
+    right: 19%;
+  }
+}
+
 @media (max-width: 380px) {
   html body .whatWeDo .robotGuideWhatWeDo .messageBoxWhatWeDo {
     top: -127%;
@@ -715,6 +736,12 @@ html body .whatWeDo .robotGuideWhatWeDo .messageBoxWhatWeDo p {
   text-align: center;
   line-height: 20px;
   letter-spacing: 1.2px;
+}
+
+@media (max-width: 480px) {
+  html body .whatWeDo .robotGuideWhatWeDo .messageBoxWhatWeDo p {
+    font-size: .9em;
+  }
 }
 
 @media (max-width: 380px) {
@@ -1066,7 +1093,7 @@ html body .howWeWork .robotGuideHowWeWork {
 
 @media (max-width: 380px) {
   html body .howWeWork .robotGuideHowWeWork {
-    top: 20.5%;
+    top: 22.5%;
   }
 }
 
@@ -1100,6 +1127,13 @@ html body .howWeWork .robotGuideHowWeWork .circleOneHowWeWork {
   opacity: 0;
 }
 
+@media (max-width: 480px) {
+  html body .howWeWork .robotGuideHowWeWork .circleOneHowWeWork {
+    left: 17%;
+    top: -10%;
+  }
+}
+
 @media (max-width: 380px) {
   html body .howWeWork .robotGuideHowWeWork .circleOneHowWeWork {
     left: 17%;
@@ -1116,6 +1150,13 @@ html body .howWeWork .robotGuideHowWeWork .circleTwoHowWeWork {
   top: -7%;
   left: 25%;
   opacity: 0;
+}
+
+@media (max-width: 480px) {
+  html body .howWeWork .robotGuideHowWeWork .circleTwoHowWeWork {
+    left: 15%;
+    top: -32%;
+  }
 }
 
 @media (max-width: 380px) {
@@ -1136,6 +1177,13 @@ html body .howWeWork .robotGuideHowWeWork .messageBoxHowWeWork {
   opacity: 0;
 }
 
+@media (max-width: 480px) {
+  html body .howWeWork .robotGuideHowWeWork .messageBoxHowWeWork {
+    left: 5%;
+    top: -110%;
+  }
+}
+
 @media (max-width: 380px) {
   html body .howWeWork .robotGuideHowWeWork .messageBoxHowWeWork {
     left: 5%;
@@ -1149,6 +1197,12 @@ html body .howWeWork .robotGuideHowWeWork .messageBoxHowWeWork p {
   text-align: center;
   line-height: 20px;
   letter-spacing: 1.2px;
+}
+
+@media (max-width: 480px) {
+  html body .howWeWork .robotGuideHowWeWork .messageBoxHowWeWork p {
+    font-size: .8em;
+  }
 }
 
 @media (max-width: 380px) {
@@ -1413,6 +1467,12 @@ html body .projects {
   }
 }
 
+@media (max-width: 380px) {
+  html body .projects h2 {
+    padding-bottom: 0%;
+  }
+}
+
 html body .projects .projectBoxes {
   width: 80%;
   margin-top: 5%;
@@ -1426,7 +1486,13 @@ html body .projects .projectBoxes {
 
 @media (max-width: 768px) {
   html body .projects .projectBoxes {
-    width: 85%;
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .projects .projectBoxes {
+    width: 100%;
   }
 }
 
@@ -1458,15 +1524,15 @@ html body .projects .projectBoxes > .projectBox:nth-child(odd) {
 
 @media (max-width: 576px) {
   html body .projects .projectBoxes > .projectBox:nth-child(odd) {
-    -webkit-transform: translateX(-40px);
-            transform: translateX(-40px);
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
   }
 }
 
 @media (max-width: 380px) {
   html body .projects .projectBoxes > .projectBox:nth-child(odd) {
-    -webkit-transform: translateX(-33px);
-            transform: translateX(-33px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
 }
 
@@ -1477,6 +1543,12 @@ html body .projects .projectBoxes > .projectBox:nth-child(odd) > .projectRobot {
   width: 20%;
   right: -19%;
   top: 20%;
+}
+
+@media (max-width: 768px) {
+  html body .projects .projectBoxes > .projectBox:nth-child(odd) > .projectRobot {
+    display: none;
+  }
 }
 
 html body .projects .projectBoxes > .projectBox:nth-child(odd) > .projectPicture {
@@ -1515,15 +1587,15 @@ html body .projects .projectBoxes > .projectBox:nth-child(even) {
 
 @media (max-width: 576px) {
   html body .projects .projectBoxes > .projectBox:nth-child(even) {
-    -webkit-transform: translateX(40px);
-            transform: translateX(40px);
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
   }
 }
 
 @media (max-width: 380px) {
   html body .projects .projectBoxes > .projectBox:nth-child(even) {
-    -webkit-transform: translateX(33px);
-            transform: translateX(33px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
 }
 
@@ -1532,6 +1604,12 @@ html body .projects .projectBoxes > .projectBox:nth-child(even) > .projectRobot 
   width: 20%;
   left: -19%;
   top: 20%;
+}
+
+@media (max-width: 768px) {
+  html body .projects .projectBoxes > .projectBox:nth-child(even) > .projectRobot {
+    display: none;
+  }
 }
 
 html body .projects .projectBoxes > .projectBox:nth-child(even) > .projectPicture {
@@ -1589,7 +1667,7 @@ html body .projects .projectBoxes .projectBox {
 
 @media (max-width: 576px) {
   html body .projects .projectBoxes .projectBox {
-    width: 95%;
+    width: 100%;
     margin: 7% auto;
     background-color: #161616;
   }
@@ -1598,6 +1676,12 @@ html body .projects .projectBoxes .projectBox {
 @media (max-width: 480px) {
   html body .projects .projectBoxes .projectBox {
     margin: 10% auto;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .projects .projectBoxes .projectBox {
+    margin: 15% auto;
   }
 }
 
@@ -1888,6 +1972,12 @@ html body .contact .formAndSvgs .contactForm .frostedDiv #infoContact {
 @media (max-width: 1280px) {
   html body .contact .formAndSvgs .contactForm .frostedDiv #infoContact {
     padding: 5% 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .contact .formAndSvgs .contactForm .frostedDiv #infoContact {
+    font-size: 1em;
   }
 }
 
