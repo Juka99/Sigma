@@ -2398,6 +2398,12 @@ footer .socials #instagramLink .messageBoxFooter {
   }
 }
 
+@media (max-width: 1440px) {
+  footer .socials #instagramLink .messageBoxFooter {
+    top: -70%;
+  }
+}
+
 @media (max-width: 992px) {
   footer .socials #instagramLink .messageBoxFooter {
     top: -70%;
@@ -2596,24 +2602,30 @@ footer .firePlace .messageBoxFirePlace {
   }
 }
 
+@media (max-width: 1440px) {
+  footer .firePlace .messageBoxFirePlace {
+    top: 20%;
+  }
+}
+
 @media (max-width: 1280px) {
   footer .firePlace .messageBoxFirePlace {
     left: -23%;
-    top: 13%;
+    top: 17%;
   }
 }
 
 @media (max-width: 992px) {
   footer .firePlace .messageBoxFirePlace {
     left: -35%;
-    top: 4%;
+    top: 6%;
   }
 }
 
 @media (max-width: 768px) {
   footer .firePlace .messageBoxFirePlace {
     left: -45%;
-    top: 0%;
+    top: 7%;
   }
 }
 

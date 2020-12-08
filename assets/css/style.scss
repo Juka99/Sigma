@@ -2655,6 +2655,12 @@ footer{
 
                 }
 
+                @include d8{
+
+                    top : -70%;
+
+                }
+
                 @include d13{
 
                     top : -70%;
@@ -2858,24 +2864,30 @@ footer{
 
             }
 
+            @include d8{
+
+                top : 20%;
+
+            }
+
             @include d11{
 
                 left: -23%;
-                top : 13%;
+                top : 17%;
 
             }
 
             @include d13{
 
                 left: -35%;
-                top : 4%;
+                top : 6%;
 
             }
 
             @include d14{
 
                 left: -45%;
-                top : 0%;
+                top : 7%;
 
             }
 
